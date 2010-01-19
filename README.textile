@@ -1,0 +1,82 @@
+h1. CKI Simple Github Plugin
+
+*pi.simplegithub.php*
+
+This is an ExpressionEngine 2.0 plugin that will return an unordered list of all the authenticating user's github repositories.
+
+h2. Info
+
+Developed by Christopher Imrie, "http://www.christopherimrie.com":url<br/>
+License: "http://creativecommons.org/licenses/by-sa/3.0/":url
+
+h2. Requirements
+
+* ExpressionEngine 2.0
+* cURL (PHP)
+* SimpleXML (PHP)
+
+h2. Installation
+
+* Create a new folder called <code>simplegithub</code> inside your third_party folder
+* Place the <code>simplegithub.php</code> file inside the new <code>simplegithub</code> folder.<br/>
+
+h2. How to use
+
+This plugin only supports a single tag at the moment, but tag pair processing is in the works.  You must provide your github username and API token.  Both of these can be found in your github dashboard.
+
+h3. Simple Example
+
+
+
+<pre>
+	<code>
+		
+			<h4>Here are my github repositories:</h4>
+			{exp:simplegithub username="ckimrie" token="2356als34kej172k1j2hkj1312314699"}
+			
+	</code>
+</pre>
+
+*Returns:*
+<pre>
+	<code>
+		<h4>Here are my github repositories:</h4>
+		<ul class='github-repos'>
+			<li>
+				<h5><a href="http://www.github_url.com">Github Repository name</a></h5><br/>
+				<p>Here is the description of your github repository</p>
+			</li>
+			<li>
+				<h5><a href="http://www.github_url.com">Github Repository name 2</a></h5><br/>
+				<p>Here is the description of your github repository</p>
+			</li>
+			<li>
+				<h5><a href="http://www.github_url.com">Github Repository name 3</a></h5><br/>
+				<p>Here is the description of your github repository</p>
+			</li>
+		</ul>
+	</code>
+</pre>
+
+h2. Parameters
+
+h3. username
+
+<pre>
+	<code>username="ckimrie"</code>
+</pre>
+
+*Required* - Your github username.  This can be found in the github dashboard when logged in.
+
+h3. token
+
+<pre>
+	<code>token="1wfwpi12409sdq2d7363202msdaqcs2dv4gd"</code>
+</pre>
+
+*Required* - Your github API token.  This can be found in the github dashboard when logged in.
+
+h2. Changelog
+
+*1.0*
+* Initial Commit

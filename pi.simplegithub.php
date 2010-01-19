@@ -1,5 +1,13 @@
 <?php
 
+	$plugin_info = array(
+	  'pi_name' => 'CKI Simple Github',
+	  'pi_version' =>'1.0',
+	  'pi_author' =>'Christopher Imrie',
+	  'pi_author_url' => 'http://www.christopherimrie.com/',
+	  'pi_description' => 'Returns an unordered list of all github repositories for the authenticating user',
+	  );
+
 class Simplegithub
 {
 	var $username 		= '';
@@ -55,7 +63,8 @@ class Simplegithub
 			
 			foreach($this->data as $repo)
 			{
-				$this->return_data .= "<li><a href='{$repo['url']}'>{$repo['name']}</a><br/>{$repo['description']}</li>";
+				$this->return_data .= "<li><h5><a href='{$repo['url']}'>{$repo['name']}</a></h5><br/>
+										<p>{$repo['description']}</p></li>";
 			}
 			
 			$this->return_data .= "</ul>" ;
